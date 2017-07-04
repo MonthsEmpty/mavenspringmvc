@@ -8,12 +8,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
  *
  * Created by renwu on 2017/6/29.
  */
-@Controller("/hello")
+@Controller
+@RequestMapping("/hello")
 public class HelloController {
 
     @RequestMapping("/first")
     @ResponseBody
     public String hello(){
         return "asfsda";
+    }
+
+    @RequestMapping("/second")
+    public String helloView(){
+        return "hello";
     }
 }
